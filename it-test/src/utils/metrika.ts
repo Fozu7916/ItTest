@@ -3,6 +3,17 @@ const METRIKA_SCRIPT = 'https://mc.yandex.ru/metrika/tag.js'
 
 let initialized = false
 
+// Расширяем глобальный объект window для корректной типизации Яндекс.Метрики
+declare global {
+  interface Window {
+    ym?: {
+      (...args: unknown[]): void
+      a?: unknown[][]
+      l?: number
+    }
+  }
+}
+
 function getCounterId(): number | null {
   if (!COUNTER_ID) return null
   const id = Number(COUNTER_ID)
