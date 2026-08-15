@@ -1,4 +1,5 @@
 <div align="center">
+https://testforit.netlify.app/
 
 # 🎯 IT Career Test (Куда идти в IT?)
 
@@ -9,7 +10,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
 
-[🔗 Открыть приложение](https://testforit.netlify.app/) · [💬 Мой Telegram-канал](https://t.me/FozuZXC)
+[💬 Мой Telegram-канал](https://t.me/FozuZXC)
 
 </div>
 
