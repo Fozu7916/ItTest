@@ -1,5 +1,6 @@
 import type { TestResult } from '../types'
 import { getTopResults } from '../utils/scoring'
+import { trackTelegramClick } from '../utils/metrika'
 import { DirectionCard } from './DirectionCard'
 
 interface ResultsProps {
@@ -68,6 +69,7 @@ export function Results({ results, onRestart, onRetakeLong, wasShort }: ResultsP
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary btn-tg"
+            onClick={() => trackTelegramClick('results')}
           >
             Написать @FozuZXC
           </a>

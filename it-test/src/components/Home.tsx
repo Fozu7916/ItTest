@@ -1,4 +1,5 @@
 import type { TestType } from '../types'
+import { trackTelegramClick } from '../utils/metrika'
 
 interface HomeProps {
   onSelectTest: (type: TestType) => void
@@ -89,6 +90,7 @@ export function Home({ onSelectTest }: HomeProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="tg-link"
+            onClick={() => trackTelegramClick('home')}
           >
             @FozuZXC
           </a>{' '}

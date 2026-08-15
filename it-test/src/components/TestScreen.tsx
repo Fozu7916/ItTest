@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Question } from '../types'
 import { ProgressBar } from './ProgressBar'
 
@@ -6,9 +6,15 @@ interface TestScreenProps {
   questions: Question[]
   onComplete: (answers: number[]) => void
   onBack: () => void
+  onQuestionChange?: (index: number) => void
 }
 
-export function TestScreen({ questions, onComplete, onBack }: TestScreenProps) {
+export function TestScreen({
+  questions,
+  onComplete,
+  onBack,
+  onQuestionChange,
+}: TestScreenProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [selected, setSelected] = useState<number | null>(null)
@@ -16,6 +22,10 @@ export function TestScreen({ questions, onComplete, onBack }: TestScreenProps) {
 
   const question = questions[currentIndex]
   const isLast = currentIndex === questions.length - 1
+
+  useEffect(() => {
+    onQuestionChange?.(currentIndex)
+  }, [currentIndex, onQuestionChange])
 
   function handleSelect(index: number) {
     if (isAnimating) return
