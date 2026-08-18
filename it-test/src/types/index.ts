@@ -26,6 +26,7 @@ export interface Direction {
   stack: string[]
   startWith: string
   salary: string
+  courses: Course[]
 }
 
 export interface Answer {
@@ -45,3 +46,11 @@ export interface TestResult {
   maxScore: number
   percentage: number
 }
+
+export interface Course {
+  title: string
+  platform: string
+  url: string
+  isFree?: boolean
+}
+
