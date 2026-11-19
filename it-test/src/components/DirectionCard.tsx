@@ -146,7 +146,7 @@ export function DirectionCard({ result, rank, expanded = false }: DirectionCardP
             {/* Картинка с возможностью клика для увеличения */}
             <div className="modal-img-container" onClick={() => setIsZoomed(true)} title="Нажмите, чтобы увеличить">
               <img 
-                src="/search-preview.jpg" 
+                src={`${import.meta.env.BASE_URL}search-preview.jpg`} 
                 alt="Как искать курс" 
                 className="modal-preview-img"
               />
@@ -169,7 +169,7 @@ export function DirectionCard({ result, rank, expanded = false }: DirectionCardP
         <div className="zoomed-overlay" onClick={() => setIsZoomed(false)}>
           <div className="zoomed-container" onClick={(e) => e.stopPropagation()}>
             <button type="button" className="zoomed-close" onClick={() => setIsZoomed(false)}>✕ Закрыть</button>
-            <img src="/search-preview.jpg" alt="Увеличенный скриншот" className="zoomed-img" />
+            <img src={`${import.meta.env.BASE_URL}search-preview.jpg`} alt="Увеличенный скриншот" className="zoomed-img" />
           </div>
         </div>
       )}
