@@ -1,5 +1,5 @@
 <div align="center">
- [fozu7916.github.io/ItTest/](https://fozu7916.github.io/ItTest/)
+https://fozu7916.github.io/ItTest/
 
 # 🎯 IT Career Test (Where to go in IT?)
 
